@@ -1,0 +1,71 @@
+body {
+    background-color: #E6E7C6;
+    color: #1f2937;
+}
+
+.desplegable {
+    position: absolute;
+    margin-top: 5vh;
+    margin-left: 2vh;
+    font-size: large;
+    color: cadetblue;
+    text-decoration: underline;
+}
+
+.desplegable .contenido {
+    display: none;
+    background-color: #dfe1aa;
+    position: absolute;
+    z-index: 1;
+    border: 1px solid #000;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 40vh;
+}
+
+.desplegable label:hover~.contenido {
+    display: block;
+}
+
+.desplegable label:active~.contenido {
+    display: block;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.content { 
+    max-width: 50vw; 
+    margin: auto;
+    text-align: center;
+    }
+
+.letter {
+    max-width: 4vw;
+    height: 4vw;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.ul-result{
+    list-style-type: none;
+  overflow: hidden;
+}
+
+.li-result {
+    display:inline-block;
+  text-align: center;
+  margin: auto;
+  font-size: 4vw;
+  padding: 2.5vw;
+}

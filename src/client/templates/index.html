@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Wordle</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', path='favicon.ico')}}">
+    <link rel="stylesheet" href="{{url_for('static', path='styles.css')}}">
+    <script src="{{url_for('static', path='scripts.js')}}" defer></script>
+</head>
+
+<body>
+    <div class="desplegable">
+        <label>Rules</label>
+        <div class="contenido">
+            <ul>
+                <li>
+                    <p class="green">Green</p>You got the letter and position right.
+                </li>
+                <li>
+                    <p class="blue">Blue</p>You got the letter right, but not the position.
+                </li>
+                <li>
+                    <p class="red">Red</p>You didn't get the letter right.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div>
+            <h1>Fast Wordle <p id="info-tries"></p>
+            </h1>
+            <div>
+                <form action="/start" method="POST">
+                    <input type="text" class="letter" id="letter_1" name="letter_1" maxlength="1">
+                    <input type="text" class="letter" id="letter_2" name="letter_2" maxlength="1">
+                    <input type="text" class="letter" id="letter_3" name="letter_3" maxlength="1">
+                    <input type="text" class="letter" id="letter_4" name="letter_4" maxlength="1">
+                    <input type="text" class="letter" id="letter_5" name="letter_5" maxlength="1">
+                    <button class="submit" id="submit">Submit</button>
+                </form>
+            </div>
+
+            <div id="results">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
