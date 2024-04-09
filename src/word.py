@@ -3,7 +3,6 @@ class Word:
         self.text = text
 
     def compare(self, word2:str):
-        print(f"{self.text} - {word2}")
         if (len(self.text) != len(word2)):
             raise ValueError("Words must be of same length")
         result = []

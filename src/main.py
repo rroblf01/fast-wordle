@@ -18,5 +18,4 @@ async def home(request: Request):
 @app.post("/api/resoulve")
 def resoulve(wordItem: WordRequests) -> WordResponse:
     word = get_word_class()
-    print(word.text)
     return {"result": word.compare(wordItem.word)}
