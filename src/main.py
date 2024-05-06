@@ -3,8 +3,8 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
-from utils import get_word_class
-from schemas import WordRequests, WordResponse
+from .utils import get_word_class
+from .schemas import WordRequests, WordResponse
 
 app = FastAPI()
 
@@ -16,6 +16,6 @@ async def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 @app.post("/api/resoulve")
-def resoulve(wordItem: WordRequests) -> WordResponse:
+async def resoulve(wordItem: WordRequests) -> WordResponse:
     word = get_word_class()
     return {"result": word.compare(wordItem.word)}

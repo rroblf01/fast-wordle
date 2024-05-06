@@ -1,7 +1,7 @@
 import datetime
 
-from word import Word
-from consts import WORDS
+from .word import Word
+from .consts import WORDS
 
 
 def get_word_class():
